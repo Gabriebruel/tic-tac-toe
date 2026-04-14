@@ -31,7 +31,15 @@ document.getElementById('twoPlayer').addEventListener('click', () => {
 });
 
 document.getElementById('vsAI').addEventListener('click', () => {
+    document.getElementById('twoPlayer').style.display = 'none';
+    document.getElementById('vsAI').style.display = 'none';
     document.getElementById('difficulty').style.display = 'block';
+});
+
+document.getElementById('back').addEventListener('click', () => {
+    document.getElementById('difficulty').style.display = 'none';
+    document.getElementById('twoPlayer').style.display = 'inline-block';
+    document.getElementById('vsAI').style.display = 'inline-block';
 });
 
 document.querySelectorAll('.diff').forEach(btn => {
