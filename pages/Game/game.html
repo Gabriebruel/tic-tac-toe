@@ -7,21 +7,35 @@
     <link rel="stylesheet" href="game.css">
 </head>
 <body>
-    <div class="game-container">
-        <h1>Jogo da Velha</h1>
-        <div class="board" id="board">
-            <div class="cell" data-index="0"></div>
-            <div class="cell" data-index="1"></div>
-            <div class="cell" data-index="2"></div>
-            <div class="cell" data-index="3"></div>
-            <div class="cell" data-index="4"></div>
-            <div class="cell" data-index="5"></div>
-            <div class="cell" data-index="6"></div>
-            <div class="cell" data-index="7"></div>
-            <div class="cell" data-index="8"></div>
+    <div id="menu">
+        <h2>Escolha o modo:</h2>
+        <button id="twoPlayer">2 Jogadores</button>
+        <button id="vsAI">Vs IA</button>
+        <div id="difficulty" style="display:none;">
+            <h3>Dificuldade:</h3>
+            <button class="diff" data-diff="easy">Fácil</button>
+            <button class="diff" data-diff="medium">Médio</button>
+            <button class="diff" data-diff="hard">Difícil</button>
+            <button class="diff" data-diff="impossible">Impossível</button>
         </div>
-        <div class="message" id="message">Vez do jogador X</div>
-        <button class="reset-btn" id="reset">Reiniciar Jogo</button>
+    </div>
+    <div id="game" style="display:none;">
+        <div class="game-container">
+            <h1>Jogo da Velha</h1>
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <div class="message" id="message">Vez do jogador X</div>
+            <button class="reset-btn" id="reset">Reiniciar Jogo</button>
+        </div>
     </div>
 
     <script src="game.js"></script>
