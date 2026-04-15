@@ -1,7 +1,105 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+}
+
+/* CONTEÚDO */
+main, #menu, #game {
+    flex: 1;
+    padding-bottom: 40px;
+}
+
+/* LOGO */
+.logo {
+    color: #38bdf8;
+}
+
+/* BOTÃO */
+.btn-primary {
+    background: linear-gradient(45deg, #3b82f6, #9333ea);
+    border: none;
+    border-radius: 10px;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
+    padding: 15px;
+    background: rgba(255,255,255,0.05);
+}
+
+/* =========================
+   HAMBURGUER
+========================= */
+/* REMOVE BORDA */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* ÍCONE HAMBURGUER BRANCO FORÇADO */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+/* ANIMAÇÃO MENU */
+.collapse {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: 0.3s;
+}
+
+.collapse.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MENU GLASS */
+.navbar-nav {
+    background: rgba(255,255,255,0.06);
+    border-radius: 14px;
     padding: 10px;
-    background-color: #333;
-    color: #fff;
-    font-size: 14px;
+    backdrop-filter: blur(12px);
+}
+
+/* LINKS */
+.nav-link {
+    color: #e2e8f0;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 6px 0;
+    transition: 0.25s;
+}
+
+/* HOVER */
+.nav-link:hover {
+    background: linear-gradient(45deg, #3b82f6, #9333ea);
+    color: white;
+    transform: translateX(6px);
+    box-shadow: 0 0 15px rgba(147,51,234,0.5);
+}
+
+/* ATIVO */
+.nav-link.active {
+    background: linear-gradient(45deg, #3b82f6, #9333ea);
+    color: white;
 }

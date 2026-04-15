@@ -1,0 +1,63 @@
+/* FUNDO */
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    margin: 0;
+}
+
+/* CENTRALIZA */
+/* CENTRALIZA + ESPAÇAMENTO */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 80px;   /* espaço do header */
+    padding-bottom: 80px; /* espaço do footer */
+}
+
+/* CARD PRINCIPAL */
+.about-card {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 90%;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    text-align: center;
+
+    /* ANIMAÇÃO DE ENTRADA */
+    animation: fadeUp 0.6s ease;
+}
+
+/* TÍTULO */
+.about-card h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* TEXTO */
+.about-card p {
+    color: #cbd5f5;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* BOTÃO */
+.about-card .btn {
+    margin-top: 10px;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

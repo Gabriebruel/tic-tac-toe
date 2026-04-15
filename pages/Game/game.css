@@ -1,58 +1,128 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
 }
-#menu {
+
+/* HEADER */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgba(0,0,0,0.3);
+}
+
+/* BOTÃO VOLTAR */
+.back-menu {
+    background: #1e293b;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.back-menu:hover {
+    background: #3b82f6;
+}
+
+/* CENTRAL */
+.center {
     text-align: center;
+    margin-top: 60px;
 }
-#menu button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-}
-#back {
-    margin-top: 20px;
-}
-#difficulty {
-    margin-top: 20px;
-}
+
+/* CONTAINER */
 .game-container {
-    text-align: center;
+    display: inline-block;
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 20px;
 }
+
+/* MENSAGEM */
+.message {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* 🔵 X */
+.message.x {
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+/* 🌸 O */
+.message.o {
+    color: #f472b6;
+    background: rgba(244, 114, 182, 0.1);
+    box-shadow: 0 0 10px rgba(244, 114, 182, 0.3);
+}
+
+/* TABULEIRO */
 .board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 5px;
-    margin: 20px auto;
+    gap: 10px;
+    justify-content: center;
 }
+
+/* CELULAS */
 .cell {
     width: 100px;
     height: 100px;
-    background-color: #fff;
-    border: 2px solid #333;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     font-size: 48px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    color: #38bdf8;
+    transition: 0.2s;
 }
+
 .cell:hover {
-    background-color: #e0e0e0;
+    background: rgba(59,130,246,0.2);
 }
-.message {
-    font-size: 24px;
-    margin-top: 20px;
-}
+
+/* BOTÕES */
+#menu button,
+#difficulty button,
 .reset-btn {
-    margin-top: 20px;
+    margin: 10px;
     padding: 10px 20px;
-    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    background: #1e293b;
+    color: white;
     cursor: pointer;
+    transition: 0.2s;
+}
+
+#menu button:hover,
+#difficulty button:hover,
+.reset-btn:hover {
+    background: linear-gradient(45deg, #3b82f6, #9333ea);
+    transform: scale(1.05);
+}
+
+/* 🎉 ANIMAÇÃO DE VITÓRIA */
+.win {
+    background: linear-gradient(45deg, #22c55e, #4ade80);
+    color: white;
+    animation: winPulse 0.6s ease infinite alternate;
+}
+
+@keyframes winPulse {
+    from {
+        transform: scale(1);
+        box-shadow: 0 0 5px #22c55e;
+    }
+    to {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px #4ade80;
+    }
 }
